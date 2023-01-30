@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP1
+﻿namespace OOP1
 {
     public class Airplane
     {
@@ -51,10 +44,7 @@ namespace OOP1
             StartDate = new Date(startDate);
             FinishDate = new Date(finishDate);
         }
-        private bool areDatesSetted()
-        {
-            return StartDate != null && FinishDate != null;
-        }
+        private bool areDatesSetted() => StartDate != null && FinishDate != null;
         public int? GetTotalTime()
         {
             if (areDatesSetted())
@@ -70,20 +60,6 @@ namespace OOP1
             }
             return null;
         }
-        public bool? IsArrivingToday()
-        {
-            if (areDatesSetted())
-                return StartDate.Equals(FinishDate);
-            return null;
-        }
-
-
-
-
-
-
-
-
-
+        public bool? IsArrivingToday() => areDatesSetted() ? StartDate.Equals(FinishDate) : null;
     }
 }
