@@ -69,6 +69,10 @@
             FinishDate = airplane.FinishDate;
         }
 
+        /// <summary>
+        /// Create a new copy of this Airplane object.
+        /// </summary>
+        /// <returns>Airplane</returns>
         public Airplane Copy()
         {
             return new(this);
