@@ -56,17 +56,5 @@
             Hours = hours;
             Minutes = minutes;
         }
-
-        public override bool Equals(object? obj)
-        {
-            if (obj is Date date)
-            {
-                if (obj == null || !GetType().Equals(obj.GetType()))
-                    return false;
-                else
-                    return (Year == date.Year) && (Month == date.Month) && (Day == date.Day) && (Hours == date.Hours) && (Minutes == date.Minutes);
-            }
-            return false;
-        }
     }
 }
