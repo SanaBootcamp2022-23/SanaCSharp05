@@ -65,8 +65,8 @@
         {
             StartCity = airplane.StartCity;
             FinishCity = airplane.FinishCity;
-            StartDate = airplane.StartDate;
-            FinishDate = airplane.FinishDate;
+            StartDate = airplane.StartDate.Copy();
+            FinishDate = airplane.FinishDate.Copy();
         }
 
         /// <summary>

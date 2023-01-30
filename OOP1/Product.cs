@@ -7,7 +7,7 @@
         private Currency _cost = new();
         private int _quantity = 0;
         private string _producer = "Unknown";
-        private int _weight = 0;
+        private double _weight = 0;
 
         public string Name
         {
@@ -55,7 +55,7 @@
             }
         }
 
-        public int Weight
+        public double Weight
         {
             get { return _weight; }
             set
@@ -67,7 +67,7 @@
 
         public Product() { }
 
-        public Product(string name, double price, Currency cost, int quantity, string producer, int weight)
+        public Product(string name, double price, Currency cost, int quantity, string producer, double weight)
         {
             Name = name;
             Price = price;
@@ -77,7 +77,7 @@
             Weight = weight;
         }
 
-        public Product(double price, Currency cost, int quantity, int weight)
+        public Product(double price, Currency cost, int quantity, double weight)
         {
             Price = price;
             Cost = cost;
@@ -95,8 +95,9 @@
         {
             Name = product.Name;
             Price = product.Price;
-            Cost = product.Cost;
+            Cost = product.Cost.Copy();
             Quantity = product.Quantity;
+            Producer = product.Producer;
             Weight = product.Weight;
         }
 
@@ -107,6 +108,33 @@
         public Product Copy()
         {
             return new(this);
+        }
+
+        /// <summary>
+        /// Calculate price of the product in Ukrainian Hryvnia.
+        /// </summary>
+        /// <returns>Price in UAH</returns>
+        public double GetPriceInUAH()
+        {
+            return Price * Cost.ExRate;
+        }
+
+        /// <summary>
+        /// Calculate the total price of all products in Ukrainian Hryvnia.
+        /// </summary>
+        /// <returns>Total price in UAH</returns>
+        public double GetTotalPriceInUAH()
+        {
+            return Quantity * GetPriceInUAH();
+        }
+
+        /// <summary>
+        /// Calculate the total weight of all products.
+        /// </summary>
+        /// <returns>Total weight</returns>
+        public double GetTotalWeight()
+        {
+            return Quantity * Weight;
         }
     }
 }
