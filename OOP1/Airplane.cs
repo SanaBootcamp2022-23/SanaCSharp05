@@ -12,7 +12,7 @@
             get { return _startCity; }
             set
             {
-                if (string.IsNullOrWhiteSpace(value))
+                if (!string.IsNullOrWhiteSpace(value))
                     _startCity = value;
             }
         }
@@ -22,7 +22,7 @@
             get { return _finishCity; }
             set
             {
-                if (string.IsNullOrWhiteSpace(value))
+                if (!string.IsNullOrWhiteSpace(value))
                     _finishCity = value;
             }
         }
@@ -72,6 +72,23 @@
         public Airplane Copy()
         {
             return new(this);
+        }
+
+        /// <summary>
+        /// Calculate the total time of the flight in minutes.
+        /// </summary>
+        /// <returns>Minutes</returns>
+        public int GetTotalTime()
+        {
+            return (int)(FinishDate.TotalTime() - StartDate.TotalTime());
+        }
+
+        /// <summary>
+        /// Returns true if the airplane arrives on the day of takeoff.
+        /// </summary>
+        public bool IsArrivingToday()
+        {
+            return StartDate.Year == FinishDate.Year && StartDate.Month == FinishDate.Month && StartDate.Day == FinishDate.Day;
         }
     }
 }
