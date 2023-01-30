@@ -60,6 +60,15 @@
             }
             return null;
         }
-        public bool? IsArrivingToday() => areDatesSetted() ? StartDate.Equals(FinishDate) : null;
+        public bool? IsArrivingToday()
+        {
+            if (areDatesSetted())
+            {
+                if (StartDate.Year == FinishDate.Year && StartDate.Month == FinishDate.Month && StartDate.Day == FinishDate.Day)
+                    return true;
+                return false;
+            }
+            return null;
+        }
     }
 }
