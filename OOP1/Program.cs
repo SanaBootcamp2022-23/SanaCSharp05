@@ -26,7 +26,7 @@ static void PrintProductDetails(Product product, string name = "Product")
 {
     Console.WriteLine($"\n{name}:\n\tName: {product.Name}\n\tProducer: {product.Producer}" +
         $"\n\tPrice: {product.Price} {product.Cost.Name} ({product.Cost.ExRate})\n\tPrice in UAH: {product.GetPriceInUAH()}" +
-        $"\n\tWeight: {product.Weight} KGs\n\tQuantity: {product.Quantity} pieces\n\tPrice" +
+        $"\n\tWeight: {product.Weight} KGs\n\tQuantity: {product.Quantity} pieces" +
         $"\n\tTotal price: {product.GetTotalPriceInUAH()} UAH\n\tTotal weight: {product.GetTotalWeight()} KGs");
 }
 
@@ -35,6 +35,7 @@ Product product2 = product1.Copy();
 product2.Name = "New Chair";
 product2.Price = 27.99;
 product2.Cost = new("GBP", 46.5120);
+product2.Quantity = 13;
 product2.Weight = 0.97;
 
 PrintProductDetails(product1, "Product 1");
