@@ -8,10 +8,6 @@ namespace Matrix
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.InputEncoding = System.Text.Encoding.UTF8;
-            Date startDate = new Date(2022,9,12,23,24);
-            Date finishtDate = new Date(2022, 9, 13, 11, 35);
-            Airplane plane = new("Київ","Варшава",new Date(2022, 9, 12, 23, 24), new Date(2022, 9, 13, 11, 35));
-            Console.WriteLine(new Product("Banana",2.23,new("Dollar",40),245,"Bolivia",1).ToString());
         }
     }
     class Airplane
