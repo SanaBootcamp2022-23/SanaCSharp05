@@ -32,7 +32,7 @@ namespace ClassLibraryOOP1
             this.Minutes = minutes;
         }
 
-        public Date(int year, int month, int day) 
+        public Date(int day, int month, int year) 
         {
             this.Year = year;
             this.Month = month;
@@ -52,30 +52,30 @@ namespace ClassLibraryOOP1
 
         public int year
         {
-            set{ Year = value; }
+            set{ if(value >= 2023) Year = value; }
             get{ return Year; }
         }
 
         public int hours
         {
-            set { Hours = value; }
+            set { if (value >= 0 && value <= 24) Hours = value; }
             get { return Hours; }
         }
 
         public int day
         {
-            set { Day = value; }
+            set { if(value >= 1 && value <= 31) Day = value; }
             get { return Day; }
         }
 
         public int minutes
         {
-            set { Minutes = value; }
+            set { if(value >= 0 && value <= 59) Minutes = value; }
             get { return Minutes; }
         }
         public int month
         {
-            set { Month = value; }
+            set { if(value >= 1 && value <= 12) Month = value; }
             get { return Month; }
         }
 
