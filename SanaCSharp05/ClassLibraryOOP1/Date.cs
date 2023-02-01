@@ -13,6 +13,7 @@ namespace ClassLibraryOOP1
         protected int Day;
         protected int Hours;
         protected int Minutes;
+
         public Date()
         {
            this.Year = DateTime.Now.Year;

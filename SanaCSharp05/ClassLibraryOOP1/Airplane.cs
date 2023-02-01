@@ -11,8 +11,8 @@
         { 
             this.StartDate = new Date();
             this.FinishDate = new Date();
-            this.startCity = null;
-            this.finishCity = null;
+            this.StartCity = null;
+            this.FinishCity = null;
         }
 
         public Airplane(string startCity, string finsihCity, Date startDate, Date finishDate)

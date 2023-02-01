@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryOOP1
 {
-    internal class Product
+    public class Product
     {
     }
 }
