@@ -44,10 +44,9 @@ namespace OOP1
         {
             DateData = new DateData(Year, Month, Day, Hours, Minutes, Seconds);
         }
-        public Date(DateTime date)
-        {
-            DateData = new DateData(date.Year, date.Month, date.Day, date.Hour, date.Minute, date.Second);
-        }
+        public Date(DateTime date) 
+            : this(date.Year, date.Month, date.Day, date.Hour, date.Minute, date.Second)
+        { }
 
         public Date(Date clone)
         {
