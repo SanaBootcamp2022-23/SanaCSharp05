@@ -111,13 +111,17 @@ namespace OOP1
         }
 
         //отримуємо гривні та загальну ціну
-        public double GetUAH()
+        public double GetPriceInUAH()
         {
             return Price * Cost.ExRate;
         }
-        public double GetTotalPriceUAH()
+        public double GetTotalPriceInUAH()
         {
-            return Quantity * GetUAH();
+            return Quantity * GetPriceInUAH();
+        }
+        public double GetTotalWeight()
+        {
+            return Quantity * Weight;
         }
     }
 }

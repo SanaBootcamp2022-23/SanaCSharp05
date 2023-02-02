@@ -29,11 +29,12 @@ static void ShowProductDetails(Product product, string name = "Product")
 {
     Console.WriteLine($"{name}:\n\tName: {product.Name}" +
         $"\n\tPrice: {product.Price} {product.Cost.Name} ({product.Cost.ExRate})" +
-        $"\n\tPrice in UAH: {Math.Round(product.GetUAH())}" +
+        $"\n\tPrice in UAH: {Math.Round(product.GetPriceInUAH())}" +
         $"\n\tQuantity: {product.Quantity}" +
         $"\n\tProducer: {product.Producer}" +
         $"\n\tWeight: {product.Weight} kg" +
-        $"\n\tTotal price: {Math.Round(product.GetTotalPriceUAH())} UAH");
+        $"\n\tTotal price: {Math.Round(product.GetTotalPriceInUAH())} UAH" +
+        $"\n\tTotal weight: { product.GetTotalWeight()} kg ");
 }
 
 Product product1 = new("Monitor", 200, new("USD", 36.73), 7, "LG", 3.1);
