@@ -104,7 +104,7 @@ namespace OOP1
             DateTime dateTimeStart = new DateTime(StartDate.GetYear(), StartDate.GetMonth(), StartDate.GetDay(), StartDate.GetHours(), StartDate.GetMinutes(), 0);
             DateTime dateTimeFinish = new DateTime(FinishDate.GetYear(), FinishDate.GetMonth(), FinishDate.GetDay(), FinishDate.GetHours(), FinishDate.GetMinutes(), 0);
             TimeSpan totalTime = dateTimeFinish - dateTimeStart;
-            return totalTime.Minutes;
+            return totalTime.Days*24*60+totalTime.Hours*24+totalTime.Minutes;
         }
 
         public bool IsArrivingToday()
