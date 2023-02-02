@@ -9,7 +9,7 @@ namespace OOP1
             Console.WriteLine("Airplane--------------------");
             Airplane plane = new Airplane("Kyiv","Paris",new Date(2023,01,01,13,30), new Date(2023, 01, 01, 20, 30));
             plane.GetTotalTime();
-            Console.WriteLine(plane.IsArrivingToday());
+            Console.WriteLine("Arriving today " + plane.IsArrivingToday());
             //---Prodcut
             Console.WriteLine("Product--------------------");
             Product product = new Product("Shoes", 700, new Currency("dollar", 8), 10, "Adidas", 0.400);

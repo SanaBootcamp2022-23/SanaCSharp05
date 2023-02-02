@@ -64,7 +64,7 @@ namespace OOP1
 
         public bool IsArrivingToday()
         {
-            if (startdate.Day == finishdate.Day)
+            if (startdate.Day == finishdate.Day && startdate.Month==finishdate.Month && startdate.Year==finishdate.Year)
                 return true;
             return false;
         }
