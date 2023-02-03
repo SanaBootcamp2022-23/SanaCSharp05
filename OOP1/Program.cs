@@ -22,3 +22,27 @@ Console.WriteLine($"\nІнформація про подорож після зм
 
 Console.WriteLine($"\nЗагальний час подорожі -> {airplane.GetTotalTime()} хвилин.");
 Console.WriteLine($"Чи відбувся початок і кінець подорожі в один день -> {airplane.IsArrivingToday()}");
+Console.WriteLine("\n----------------------------------------------------------------\n");
+
+Product product = new Product("Apple Iphone 14", 1200, new Currency("долар", 38), 10, 0.4);
+Console.WriteLine($"Інформація про товар:\n\tІм'я продукту -> {product.GetName()}\n\t" +
+    $"Ціна продукту -> {product.GetPrice()}\n\tВалюта -> {product.GetCurrency().GetNameCurrency()}\n\t" +
+    $"Курс валюти до гривні -> {product.GetCurrency().GetExRateCurrency()}\n\tКількість товарів на складі -> " +
+    $"{product.GetQuantity()}\n\tВага товару -> {product.GetWeight()} кг.");
+
+product.SetName("Samsung Galaxy S21 Ultra");
+product.SetPrice(1300);
+product.SetCurrency(new Currency("євро", 40));
+product.SetQuantity(40);
+product.SetWeight(0.5);
+
+
+
+Console.WriteLine($"\nІнформація про товар після зміни даних:\n\tІм'я продукту -> {product.GetName()}\n\t" +
+    $"Ціна продукту -> {product.GetPrice()}\n\tВалюта -> {product.GetCurrency().GetNameCurrency()}\n\t" +
+    $"Курс валюти до гривні -> {product.GetCurrency().GetExRateCurrency()}\n\tКількість товарів на складі -> " +
+    $"{product.GetQuantity()}\n\tВага товару -> {product.GetWeight()} кг.");
+
+Console.WriteLine($"Ціна одиниці товару в гривнях -> {product.GetPriceInUAH()} грн.");
+Console.WriteLine($"Загальна вартість усіх наявних товарів на складі даного виду -> {product.GetTotalPriceInUAH()} грн.");
+Console.WriteLine($"Загальна вага усіх наявних товарів на складі даного виду -> {product.GetTotalWeight()} кг.");
