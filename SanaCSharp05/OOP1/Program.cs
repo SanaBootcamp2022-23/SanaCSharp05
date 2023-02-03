@@ -7,17 +7,31 @@ namespace OOP1
 	{
 		static void PrintDate(Date date)
 		{
-			Console.WriteLine("{0}.{1}.{2} {3}:{4}",
+			Console.WriteLine("{0,2:d2}.{1,2:d2}.{2,2:d2} {3,2:d2}:{4,2:d2}",
 				date.Day, date.Month, date.Year, date.Hour, date.Minutes);
 			
 		}
 		static void PrintAirplane(Airplane airplane) 
 		{
-			Console.WriteLine(airplane.StartCity);
-			Console.WriteLine(airplane.FinishCity);
-			PrintDate(airplane.StartDate);
-			PrintDate(airplane.FinishDate);
+			Console.WriteLine("Start city: "+airplane.StartCity);
+			Console.WriteLine("Finish city: "+airplane.FinishCity);
+			Console.Write("Start date: "); PrintDate(airplane.StartDate);
+			Console.Write("Finish date: "); PrintDate(airplane.FinishDate);
 		}
+		static void PrintCurrency(Currency currency)
+		{
+			Console.WriteLine("Cost: {0} {1}", currency.ExRate,currency.Name);
+		}
+		static void PrintProduct(Product product)
+		{
+			Console.WriteLine("Name: {0}",product.Name);
+			Console.WriteLine("Price: {0}", product.Price);
+			PrintCurrency(product.Currency);
+			Console.WriteLine("Quantity: {0}", product.Quantity);
+			Console.WriteLine("Producer: {0}",product.Producer);
+			Console.WriteLine("Weight: {0}",product.Weigth);
+		}
+
 		static void Main(string[] args)
 		{
 			Console.InputEncoding = Encoding.UTF8;
@@ -42,15 +56,37 @@ namespace OOP1
 
 			Console.WriteLine("First plane:");
 			PrintAirplane(airplane1);
-			Console.WriteLine("Second plane:");
+			Console.WriteLine("\nSecond plane:");
 			PrintAirplane(airplane2);
+
+			Console.WriteLine("*************");
+
+			Console.Write("Total time of flight of first airplane: ");
+			Console.WriteLine(airplane1.GetTotalTime());
+			Console.Write("Total time of flight of second airplane: ");
 			Console.WriteLine(airplane2.GetTotalTime());
+			Console.WriteLine("*************");
+
+			Console.Write("Is taking off at same day as arrival, first plane: ");
+			Console.WriteLine(airplane1.isArrivingToday());
+			Console.Write("Is taking off at same day as arrival, second plane: ");
+			Console.WriteLine(airplane2.isArrivingToday());
 
 			Console.WriteLine("----------------------------");
 			
-			Product product = new Product();
-			product.Producer = "";
-			
+			Product product1 = new Product("Notebook 16", 999.5, 
+				50, "Lenovo", 1.005, new Currency("USD", 36.5));
+
+			PrintProduct(product1);
+
+			Console.Write($"Get price of \"{product1.Name}\" in ua: {product1.GetPriceInUAH(),3:f3}");
+			Console.WriteLine();
+			Console.Write($"Get total price of \"{product1.Name}\" in ua: {product1.GetTotalPriceInUAH(),3:f3}");
+			Console.WriteLine();
+			Console.WriteLine($"Get total weight of all \"{product1.Name}\" in stock: {product1.GetTotalWeight(),3:f3}");
+
+
+
 		}
 	}
 }
