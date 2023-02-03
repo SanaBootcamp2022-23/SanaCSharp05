@@ -21,6 +21,7 @@ namespace ClassLibraryOOP1
             this.ExRate = exRate;
         }
 
+        public Currency() { }
         public Currency(Currency previousCurrency)
         { 
             this.Name = previousCurrency.Name;

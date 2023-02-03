@@ -15,6 +15,7 @@ namespace ClassLibraryOOP1
         protected string Producer;
         protected double Weight;
 
+        public Product() { }
         public Product(string name, decimal price, Currency cost, 
             int quantity, string producer, double weight)
         {
