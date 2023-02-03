@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP1
+﻿namespace OOP1
 {
 	internal class Product
 	{
@@ -41,8 +34,22 @@ namespace OOP1
 			get { return _quantity; }
 			set
 			{
-				if (value>=0) { 
+				if (value >= 0)
+				{
 					_quantity = value;
+				}
+			}
+		}
+
+		protected string _producer;
+		public string Producer
+		{
+			get { return _producer; }
+			set
+			{
+				if (value != null && value != "")
+				{
+					_producer = value;
 				}
 			}
 		}
@@ -53,7 +60,8 @@ namespace OOP1
 			get { return _weigth; }
 			set
 			{
-				if (value > 0) { 
+				if (value > 0)
+				{
 					_weigth = value;
 				}
 			}
@@ -62,7 +70,7 @@ namespace OOP1
 		protected Currency _currency;
 		public Currency Currency
 		{
-			get { return _currency; }
+			get { return new Currency(_currency); }
 			set { _currency = new Currency(value); }
 		}
 
@@ -70,35 +78,38 @@ namespace OOP1
 		{
 
 		}
-		public Product(string name, double price, int quantity, 
-			double weight, Currency currency)
+		public Product(string name, double price, int quantity,
+			string producer, double weight, Currency currency)
 		{
-			Name= name;
-			Price= price;
-			Quantity= quantity;
-			Weigth= weight;
-			Currency=new Currency(currency);
+			Name = name;
+			Price = price;
+			Quantity = quantity;
+			Producer = producer;
+			Weigth = weight;
+			Currency = new Currency(currency);
 		}
 		public Product(string name, int quantity, double weight)
 		{
 			Name = name;
 			Quantity = quantity;
+
 			Weigth = weight;
 		}
 		public Product(Product product)
 		{
-			Name= product.Name;
+			Name = product.Name;
 			Price = product.Price;
 			Quantity = product.Quantity;
+			Producer = product.Producer;
 			Weigth = product.Weigth;
-			Currency=new Currency(product.Currency);
+			Currency = new Currency(product.Currency);
 		}
 
 		public double GetPriceInUAH() => Price * Currency.ExRate;
-
-		public double GetTotalPriceInUAH() => GetPriceInUAH()*Quantity;
+		
+		public double GetTotalPriceInUAH() => GetPriceInUAH() * Quantity;
 
 		public double GetTotalWeight() => Quantity * Weigth;
-		
+
 	}
 }

@@ -47,11 +47,10 @@ namespace OOP1
 			Console.WriteLine(airplane2.GetTotalTime());
 
 			Console.WriteLine("----------------------------");
-
-			if ((bool)(1))
-			{
-				Console.WriteLine("2");
-			}
+			
+			Product product = new Product();
+			product.Producer = "";
+			
 		}
 	}
 }
