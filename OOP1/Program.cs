@@ -36,8 +36,6 @@ product.SetCurrency(new Currency("євро", 40));
 product.SetQuantity(40);
 product.SetWeight(0.5);
 
-
-
 Console.WriteLine($"\nІнформація про товар після зміни даних:\n\tІм'я продукту -> {product.GetName()}\n\t" +
     $"Ціна продукту -> {product.GetPrice()}\n\tВалюта -> {product.GetCurrency().GetNameCurrency()}\n\t" +
     $"Курс валюти до гривні -> {product.GetCurrency().GetExRateCurrency()}\n\tКількість товарів на складі -> " +
