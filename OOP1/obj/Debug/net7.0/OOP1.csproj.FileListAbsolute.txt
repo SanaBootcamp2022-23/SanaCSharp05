@@ -1,0 +1,15 @@
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/bin/Debug/net7.0/OOP1
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/bin/Debug/net7.0/OOP1.deps.json
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/bin/Debug/net7.0/OOP1.runtimeconfig.json
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/bin/Debug/net7.0/OOP1.dll
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/bin/Debug/net7.0/OOP1.pdb
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/OOP1.csproj.AssemblyReference.cache
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/OOP1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/OOP1.AssemblyInfoInputs.cache
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/OOP1.AssemblyInfo.cs
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/OOP1.csproj.CoreCompileInputs.cache
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/OOP1.dll
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/refint/OOP1.dll
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/OOP1.pdb
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/OOP1.genruntimeconfig.cache
+/Users/andriimakarevych/Desktop/Stuff/Sana/SanaCSharp05/OOP1/obj/Debug/net7.0/ref/OOP1.dll
