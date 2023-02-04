@@ -35,6 +35,5 @@ namespace ClassLibrary05
         }
         public string GetName() => Name;
         public double GetExRate() => ExRate;
-
     }
 }

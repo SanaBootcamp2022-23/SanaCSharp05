@@ -2,10 +2,10 @@
 {
     public class Airplane
     {
-        private string StartCity { get; set; }
-        private string FinishCity { get; set; }
-        private Date StartDate { get; set; }
-        private Date? FinishDate { get; set; }
+        protected string StartCity { get; set; }
+        protected string FinishCity { get; set; }
+        protected Date StartDate { get; set; }
+        protected Date? FinishDate { get; set; }
 
         public Airplane(Airplane PrevAirplane)
         {
@@ -39,5 +39,33 @@
         public string GetFinishCity() => FinishCity;
         public Date GetStartDate() => StartDate;
         public Date? GetFinishDate() => FinishDate;
+
+
+        public int GetTotalTime()
+        {
+            int StartDateInMinutes = 0, FinishDateInMinutes = 0;
+
+            if (FinishDate?.GetYear() != null && FinishDate?.GetMonth() != null)
+            {
+                int StartDateYearInMinutes = (DateTime.IsLeapYear(StartDate.GetYear()) ? 366 : 365) * 24 * 60;
+                int StartDateMonthInMinutes = DateTime.DaysInMonth(StartDate.GetYear(), StartDate.GetMonth()) * 24 * 60;
+                int StartDateDaysInMinutes = StartDate.GetDay() * 24 * 60;
+                int StartDateHoursInMinutes = StartDate.GetHours() * 60;
+                int StartDateMinutes = StartDate.GetMinutes();
+                StartDateInMinutes = StartDateYearInMinutes + StartDateMonthInMinutes + StartDateDaysInMinutes + StartDateHoursInMinutes + StartDateMinutes;
+                
+                int FinishDateYearInMinutes = (DateTime.IsLeapYear(FinishDate.GetYear()) ? 366 : 365) * 24 * 60;
+                int FinishDateMonthInMinutes = DateTime.DaysInMonth(FinishDate.GetYear(), FinishDate.GetMonth()) * 24 * 60;
+                int FinishDateDaysInMinutes = FinishDate.GetDay() * 24 * 60;
+                int FinishDateHoursInMinutes = FinishDate.GetHours() * 60;
+                int FinishDateMinutes = FinishDate.GetMinutes();
+                StartDateInMinutes = FinishDateYearInMinutes + FinishDateMonthInMinutes + FinishDateDaysInMinutes + FinishDateHoursInMinutes + FinishDateMinutes;
+            }
+
+            int TotalTime = FinishDateInMinutes - StartDateInMinutes;
+            return TotalTime;
+        }
+
+        public bool IsArrivingToday() => FinishDate?.GetDay() != null ? StartDate.GetDay() == FinishDate.GetDay() ? true : false : false;
     }
 }
