@@ -1,0 +1,15 @@
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\bin\Debug\net6.0\SanaCSharp05.exe
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\bin\Debug\net6.0\SanaCSharp05.deps.json
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\bin\Debug\net6.0\SanaCSharp05.runtimeconfig.json
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\bin\Debug\net6.0\SanaCSharp05.dll
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\bin\Debug\net6.0\SanaCSharp05.pdb
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\SanaCSharp05.csproj.AssemblyReference.cache
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\SanaCSharp05.GeneratedMSBuildEditorConfig.editorconfig
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\SanaCSharp05.AssemblyInfoInputs.cache
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\SanaCSharp05.AssemblyInfo.cs
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\SanaCSharp05.csproj.CoreCompileInputs.cache
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\SanaCSharp05.dll
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\refint\SanaCSharp05.dll
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\SanaCSharp05.pdb
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\SanaCSharp05.genruntimeconfig.cache
+E:\sana\Attempt 2\SanaCSharp05\OOP1\SanaCSharp05\obj\Debug\net6.0\ref\SanaCSharp05.dll
