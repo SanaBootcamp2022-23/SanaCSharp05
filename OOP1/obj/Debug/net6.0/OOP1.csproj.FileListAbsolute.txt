@@ -1,0 +1,15 @@
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\bin\Debug\net6.0\OOP1.exe
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\bin\Debug\net6.0\OOP1.deps.json
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\bin\Debug\net6.0\OOP1.runtimeconfig.json
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\bin\Debug\net6.0\OOP1.dll
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\bin\Debug\net6.0\OOP1.pdb
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\OOP1.csproj.AssemblyReference.cache
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\OOP1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\OOP1.AssemblyInfoInputs.cache
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\OOP1.AssemblyInfo.cs
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\OOP1.csproj.CoreCompileInputs.cache
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\OOP1.dll
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\refint\OOP1.dll
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\OOP1.pdb
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\OOP1.genruntimeconfig.cache
+C:\Users\localadmin\source\repos\SanaCSharp05\OOP1\obj\Debug\net6.0\ref\OOP1.dll
