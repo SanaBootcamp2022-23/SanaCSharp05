@@ -9,6 +9,13 @@ namespace OOP1
     internal class Product
     {
         protected string Name;
+        protected int Price;
+        protected Currency Cost;
+        protected int Quantity;
+        protected string Producer;
+        protected int Weight;
+
+
         public string _name
         {
             set
@@ -20,7 +27,6 @@ namespace OOP1
             }
             get { return Name; }
         }
-        protected int Price;
         public int price
         {
             set
@@ -32,16 +38,14 @@ namespace OOP1
             }
             get { return Price; }
         }
-        protected Currency Cost;
         public Currency cost
         {
             set
             {
-                Cost = new Currency();
+                Cost = new Currency(value);
             }
             get { return Cost; }
         }
-        protected int Quantity;
         public int quantity
         {
             set
@@ -53,8 +57,6 @@ namespace OOP1
             }
             get { return Quantity; }
         }
-
-        protected string Producer;
         public string producer
         {
             set
@@ -66,7 +68,6 @@ namespace OOP1
             }
             get { return Producer; }
         }
-        protected int Weight;
         public int weight
         {
             set
@@ -78,12 +79,12 @@ namespace OOP1
             }
             get { return Weight; }
         }
+
         
         public Product()
         {
 
         }
-
         public Product(string name, int price, Currency cost, int quantity, string producer, int weight)
         {
             Name = name;
@@ -93,7 +94,6 @@ namespace OOP1
             Producer = producer;
             Weight = weight;
         }
-
         public Product(string name, int price, int quantity, string producer)
         {
             Name = name;
@@ -101,7 +101,6 @@ namespace OOP1
             Quantity = quantity;
             Producer = producer;         
         }
-
         public Product(Product product)
         {
             Name = product.Name;
@@ -111,6 +110,7 @@ namespace OOP1
             Producer = product.Producer;
             Weight = product.Weight;
         }
+
 
         public int GetPriceInUAH() => Cost.exRate * Price;
         public int GetTotalPriceInUAH() => GetPriceInUAH() * Quantity;

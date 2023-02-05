@@ -9,6 +9,7 @@ namespace OOP1
     internal class Currency
     {
         protected string Name;
+        protected int ExRate;
         public string name
         {
             set
@@ -20,7 +21,6 @@ namespace OOP1
             }
             get { return Name; }
         }
-        protected int ExRate;
         public int exRate
         {
             set
@@ -45,6 +45,11 @@ namespace OOP1
         public Currency(int exRate)
         {
             ExRate = exRate;
+        }
+        public Currency(Currency currency)
+        {
+            Name = currency.Name;
+            ExRate = currency.ExRate;
         }
 
 
