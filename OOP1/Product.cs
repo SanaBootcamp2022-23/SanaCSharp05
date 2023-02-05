@@ -9,11 +9,75 @@ namespace OOP1
     internal class Product
     {
         protected string Name;
+        public string _name
+        {
+            set
+            {
+                if (value != "")
+                {
+                    Name = value;
+                }
+            }
+            get { return Name; }
+        }
         protected int Price;
+        public int price
+        {
+            set
+            {
+                if(value > 0)
+                {
+                    Price = value;
+                }
+            }
+            get { return Price; }
+        }
         protected Currency Cost;
+        public Currency cost
+        {
+            set
+            {
+                Cost = new Currency();
+            }
+            get { return Cost; }
+        }
         protected int Quantity;
+        public int quantity
+        {
+            set
+            {
+                if (value > 0)
+                {
+                    Quantity = value;
+                }
+            }
+            get { return Quantity; }
+        }
+
         protected string Producer;
+        public string producer
+        {
+            set
+            {
+                if (value != "")
+                {
+                    Producer = value;
+                }
+            }
+            get { return Producer; }
+        }
         protected int Weight;
+        public int weight
+        {
+            set
+            {
+                if(value > 0)
+                {
+                    Weight = value;
+                }
+            }
+            get { return Weight; }
+        }
         
         public Product()
         {
