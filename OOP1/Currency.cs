@@ -8,38 +8,21 @@ namespace OOP1
 {
     class Currency
     {
-        private string _name = "Unknown currency";
-        private double _exRate = 35;
+        public string Name { get; set; } = "Unknown currency";
+        public double ExRate { get; set; } = 35;
         public Currency()
         {
 
         }
         public Currency(string name, double exRate)
         {
-
+            Name = name;
+            ExRate = exRate;
         }
         public Currency(Currency currency)
         {
-            _name = currency._name;
-            _exRate = currency._exRate;
+            Name = currency.Name;
+            ExRate = currency.ExRate;
         }
-
-        public string Name 
-        {
-            get => _name;
-            set => _name = value;
-        }
-        public double ExRate 
-        {
-            get => _exRate; 
-            set 
-            {
-                if (value > 0) 
-                {
-                    _exRate = value;
-                }
-            }
-        }
-        
     }
 }
