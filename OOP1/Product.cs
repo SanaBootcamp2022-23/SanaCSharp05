@@ -18,7 +18,15 @@ public class Product
         Producer = "";
         Weight = 0;
     }
-
+    public Product(string name, int quantity, string producer, double weight)
+    {
+        Name = name;
+        Price = 0;
+        Cost = new Currency();
+        Quantity = quantity;
+        Producer = producer;
+        Weight = weight;
+    }
     public Product(string name, decimal price, Currency cost, int quantity, string producer, double weight)
     {
         Name = name;

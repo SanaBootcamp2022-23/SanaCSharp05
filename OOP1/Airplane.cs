@@ -14,7 +14,13 @@ public class Airplane
         StartDate = new Date();
         FinishDate = new Date();
     }
-
+    public Airplane(string startCity, string finishCity)
+    {
+        StartCity = startCity;
+        FinishCity = finishCity;
+        StartDate = new Date();
+        FinishDate = new Date();
+    }
     public Airplane(string startCity, string finishCity, Date startDate, Date finishDate)
     {
         StartCity = startCity;
@@ -22,10 +28,17 @@ public class Airplane
         StartDate = startDate;
         FinishDate = finishDate;
     }
+    public Airplane(Airplane original)
+    {
+        StartCity = original.startCity;
+        FinishCity = original.finishCity;
+        StartDate = original.startDate;
+        FinishDate = original.finishDate;
+    }
 
     public string StartCity
     {
-        get { return startCity; }
+        get => startCity;
         set
         {
             if (string.IsNullOrEmpty(value))
@@ -36,7 +49,7 @@ public class Airplane
 
     public string FinishCity
     {
-        get { return finishCity; }
+        get => finishCity;
         set
         {
             if (string.IsNullOrEmpty(value))
@@ -47,7 +60,7 @@ public class Airplane
 
     public Date StartDate
     {
-        get { return startDate; }
+        get => startDate;
         set
         {
             if (value == null)
@@ -58,7 +71,7 @@ public class Airplane
 
     public Date FinishDate
     {
-        get { return finishDate; }
+        get => finishDate;
         set
         {
             if (value == null)
@@ -67,5 +80,21 @@ public class Airplane
                 throw new ArgumentException("Finish date cannot be earlier than start date.");
             finishDate = value;
         }
+    }
+    public int GetTotalTime()
+    {
+        int totalMinutes = 0;
+
+        totalMinutes += (FinishDate.Day - StartDate.Day) * 1440;
+        totalMinutes += (FinishDate.Hours - StartDate.Hours) * 60;
+        totalMinutes += (FinishDate.Minutes - StartDate.Minutes);
+
+        return totalMinutes;
+    }
+    public bool IsArrivingToday()
+    {
+        return StartDate.Day == FinishDate.Day &&
+               StartDate.Month == FinishDate.Month &&
+               StartDate.Year == FinishDate.Year;
     }
 }

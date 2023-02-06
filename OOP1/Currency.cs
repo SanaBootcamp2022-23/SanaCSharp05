@@ -9,7 +9,11 @@ public class Currency
         Name = "UAH";
         ExRate = 1;
     }
-
+    public Currency(string name)
+    {
+        Name = name;
+        ExRate = 1;
+    }
     public Currency(string name, double exRate)
     {
         Name = name;
