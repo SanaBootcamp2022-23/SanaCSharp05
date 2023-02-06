@@ -8,13 +8,13 @@ namespace OOP1
 {
     public class Product
     {
-        private string Name;
-        private float Price;
-        private Currency Cost;
-        private int Quantity;
-        private string Producer;
-        private float Weight;
-        
+        public string Name { get; set; }
+        public float Price { get; set; }
+        public Currency Cost { get; set; }
+        public int Quantity { get; set; }
+        public string Producer { get; set; }
+        public float Weight { get; set; }
+
         public Product()
         {
             Name = "No name";

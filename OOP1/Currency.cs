@@ -8,8 +8,8 @@ namespace OOP1
 {
     public class Currency
     {
-        private string Name;
-        private float ExRate;
+        public string Name { get; set; }
+        public float ExRate { get; set; }
         public Currency()
         {
             Name = "UAH";
