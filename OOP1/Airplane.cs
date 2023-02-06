@@ -47,5 +47,31 @@ namespace OOP1
             StartDate = new Date(airplane.StartDate);
             FinishDate = new Date(airplane.FinishDate);
         }
+        public int GetTotalTime()
+        {
+            int totalMinutes = 0;
+            int daysInMonth = DateTime.DaysInMonth(StartDate.Year, StartDate.Month);
+            if (FinishDate.Month == StartDate.Month && FinishDate.Day > StartDate.Day)
+            {
+                totalMinutes = (FinishDate.Day - StartDate.Day) * 1440 + (FinishDate.Hours - StartDate.Hours) * 60 +
+                    (FinishDate.Minutes - StartDate.Minutes);
+
+            }
+            else if (FinishDate.Month - StartDate.Month == 1)
+            {
+                totalMinutes = (FinishDate.Day + (daysInMonth - StartDate.Day)) * 1440 + (FinishDate.Hours - StartDate.Hours) * 60 +
+                    (FinishDate.Minutes - StartDate.Minutes);
+            }
+            else if (FinishDate.Year > StartDate.Year && FinishDate.Month == 1 && StartDate.Month == 12)
+            {
+                totalMinutes = (FinishDate.Day + (daysInMonth - StartDate.Day)) * 1440 + (FinishDate.Hours - StartDate.Hours) * 60 +
+                    (FinishDate.Minutes - StartDate.Minutes);
+            }
+            return totalMinutes;
+        }
+        public bool IsArrivingToday()
+        {
+            return StartDate.Day == FinishDate.Day && StartDate.Month == FinishDate.Month && StartDate.Year == FinishDate.Year;
+        }
     }
 }
