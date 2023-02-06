@@ -42,7 +42,7 @@ namespace OOP1
         }
         public bool IsArrivingToday() 
         {
-                return StartDate.Day == FinishDate.Day;
+            return StartDate.Day == FinishDate.Day && StartDate.Month == FinishDate.Month && StartDate.Year == FinishDate.Year;
         }
     }
 }
