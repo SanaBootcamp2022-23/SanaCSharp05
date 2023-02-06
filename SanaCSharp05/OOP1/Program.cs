@@ -14,5 +14,10 @@ class Program
             Console.WriteLine("The Second flight will arrive on the same day");
         else
             Console.WriteLine("None of the flights will arrive on the same day");
+
+        Product SmartPhone = new Product("Iphone", 25000, new Currency("UAH", 1), 2, "Apple", 174);
+        Console.WriteLine($"The price of product in UAH: {SmartPhone.GetPriceInUAH()}");
+        Console.WriteLine($"The total cost of all goods of this type available in the warehouse: {SmartPhone.GetTotalPriceInUAH()}");
+        Console.WriteLine($"The total weight of all goods in the warehouse of this type: {SmartPhone.GetTotalWeight()}");
     }
 }
