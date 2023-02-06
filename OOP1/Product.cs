@@ -33,6 +33,15 @@ namespace OOP1
             Producer = producer;
             Weight = weight;
         }
+        public Product(string name, float price, string currencyName, float currencyExRate, int quantity, string producer, float weight)
+        {
+            Name = name;
+            Price = price;
+            Cost = new Currency(currencyName, currencyExRate);
+            Quantity = quantity;
+            Producer = producer;
+            Weight = weight;
+        }
         public Product(string name, float price, int quantity, string producer, float weight)
         {
             Name = name;
