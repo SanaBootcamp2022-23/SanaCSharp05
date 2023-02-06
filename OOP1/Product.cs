@@ -51,6 +51,17 @@ namespace OOP1
             Producer = product.Producer;
             Weight = product.Weight;
         }
-
+        public float GetPriceInUAH()
+        {
+            return Price * Cost.ExRate;
+        }
+        public float GetTotalPriceInUAH()
+        {
+            return Quantity * GetTotalPriceInUAH();
+        }
+        public float GetTotalWeight()
+        {
+            return Weight * Quantity;
+        }
     }
 }
