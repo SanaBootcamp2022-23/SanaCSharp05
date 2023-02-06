@@ -102,5 +102,20 @@ namespace OOP1
             }
             get { return weight; }
         }
+
+        public double GetPriceInUAH()
+        {
+            return Price * Cost.ExRate;
+        }
+
+        public double GetTotalPriceInUAH()
+        {
+            return Quantity * GetPriceInUAH();
+        }
+
+        public double GetTotalWeight()
+        {
+            return Weight * Quantity;
+        }
     }
 }

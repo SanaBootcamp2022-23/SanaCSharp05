@@ -2,12 +2,16 @@
 
 Airplane airplane1 = new Airplane("Zhytomyr", "Kyiv", new Date(2023, 2, 3, 17, 20), new Date(2023, 2, 3, 23, 45));
 AirplaneOutput(airplane1);
-Console.WriteLine($"Total time in minutes: {airplane1.GetTotalTime()}");
-Console.WriteLine($"Is arriving today = {airplane1.IsArrivingToday()}");
+Console.WriteLine($"\nTotal time in minutes: {airplane1.GetTotalTime()}");
+Console.WriteLine($"Is arriving today = {airplane1.IsArrivingToday()}\n");
 
-Product product1 = new Product("Processor", 5400, new Currency("UAH", 1), 50, "Intel", 0.150);
+Product product1 = new Product("Processor", 150, new Currency("US", 42.5), 50, "Intel", 0.150);
 
 ProductOutput(product1);
+
+Console.WriteLine($"\nPrice 1 product in UAH = {product1.GetPriceInUAH()} grn");
+Console.WriteLine($"Price all product in UAH = {product1.GetTotalPriceInUAH()} grn");
+Console.WriteLine($"Weight of all product at storage: {product1.GetTotalWeight()} kg");
 
 //Airplane airplane2 = new Airplane();
 
