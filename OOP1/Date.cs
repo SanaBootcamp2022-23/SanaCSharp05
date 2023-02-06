@@ -8,11 +8,11 @@ namespace OOP1
 {
     public class Date
     {
-        protected int Day;
-        protected int Month;
-        protected int Year;
-        protected int Hours;
-        protected int Minutes;
+        public int Day { get; set; }
+        public int Month { get; set; }
+        public int Year { get; set; }
+        public int Hours { get; set; }
+        public int Minutes { get; set; }
         public Date()
         {
             DateTime now = DateTime.Now;

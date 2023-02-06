@@ -8,10 +8,10 @@ namespace OOP1
 {
     public class Airplane
     {
-        protected string StartCity;
-        protected string FinishCity;
-        protected Date StartDate;
-        protected Date FinishDate;
+        public string StartCity { get; set; }
+        public string FinishCity { get; set; }
+        public Date StartDate { get; set; }
+        public Date FinishDate { get; set; }
         public Airplane()
         {
             StartCity = "undefined";
