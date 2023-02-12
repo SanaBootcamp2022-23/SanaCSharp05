@@ -12,7 +12,7 @@ namespace OOP1
         protected double price;
         protected Currency cost;
         protected int quantity;
-        protected int producer;
+        protected string producer;
         protected double weight;
 
         public string Name
@@ -39,7 +39,7 @@ namespace OOP1
             set { quantity = value; }
         }
 
-        public int Producer
+        public string Producer
         {
             get { return producer; }
             set { producer = value; }
@@ -59,7 +59,7 @@ namespace OOP1
             Price = price;
         }
 
-        public Product(string name, double price, Currency cost, int quantity, int producer, double weight) : this(name, price)
+        public Product(string name, double price, Currency cost, int quantity, string producer, double weight) : this(name, price)
         {
             Cost = new Currency(Cost);
             Quantity = quantity;
@@ -75,6 +75,21 @@ namespace OOP1
             Quantity = product.Quantity;
             Producer = product.Producer;
             Weight = product.Weight;
+        }
+
+        public double GetPriceInUAH()
+        {
+            return Price * Cost.ExRate;
+        }
+
+        public double GetTotalPriceInUAH()
+        {
+            return Price * Cost.ExRate * Quantity;
+        }
+
+        public double GetTotalWeight()
+        {
+            return Weight * Quantity;
         }
     }
 }

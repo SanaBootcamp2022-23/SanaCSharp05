@@ -38,8 +38,8 @@ namespace OOP1
 
         public Currency(Currency currency)
         {
-            name = currency.Name;
-            exRate = currency.ExRate;
+            Name = currency.Name;
+            ExRate = currency.ExRate;
         }
     }
 }
