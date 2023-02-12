@@ -8,11 +8,11 @@ namespace OOP1
 {
     public class Date
     {
-        private int year;
-        private int month;
-        private int day;
-        private int hours;
-        private int minutes;
+        protected int year;
+        protected int month;
+        protected int day;
+        protected int hours;
+        protected int minutes;
 
         public int Year
         {
