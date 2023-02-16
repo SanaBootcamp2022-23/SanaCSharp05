@@ -38,7 +38,7 @@ namespace OOP1
             startDate = StartDate;      
             finishDate = FinishDate;    
             startCity = "New York";
-            finishCity = "Kiyv";
+            finishCity = "London";
         }
         public Airplane(Airplane obj) 
         {
@@ -49,11 +49,13 @@ namespace OOP1
         }
         public string StartCity
         {
-            set {
+            set
+            {
                 if (value != "")
                     startCity = value;
             }
-            get {
+            get
+            {
                 return startCity;
             }
         }
