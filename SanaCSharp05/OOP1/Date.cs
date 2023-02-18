@@ -35,13 +35,13 @@ namespace OOP1
             Month = month;
             Day = day;
         }
-        public Date(Date other)//консруктор копіювання
+        public Date(Date obj)//консруктор копіювання
         {
-            Year = other.Year;
-            Month = other.Month;
-            Day = other.Day;
-            Hours = other.Hours;
-            Minutes = other.Minutes;
+            Year = obj.Year;
+            Month = obj.Month;
+            Day = obj.Day;
+            Hours = obj.Hours;
+            Minutes = obj.Minutes;
         }
         //властивості Get- та Set-
         public int GetYear()
