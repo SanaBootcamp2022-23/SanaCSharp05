@@ -16,25 +16,25 @@ namespace OOP1
         public string StartCity
         {
             get { return StartCity; }
-            set { if(!String.IsNullOrEmpty(value)) startCity = value; }
+            set { /*if(!String.IsNullOrEmpty(value))*/ startCity = value; }
         }
 
         public string FinishCity
         {
             get { return FinishCity; }
-            set { if (!String.IsNullOrEmpty(value)) startCity = value; }
+            set { /*if (!String.IsNullOrEmpty(value))*/ startCity = value; }
         }
 
         public Date StartDate
         {
             get { return startDate; }
-            set { if(value != null) startDate = new Date(value); }
+            set { /*if(value != null)*/ startDate = new Date(value); }
         }
 
         public Date FinishDate
         {
             get { return finishDate; }
-            set { if (value != null) finishDate = new Date(value); }
+            set { /*if (value != null)*/ finishDate = new Date(value); }
         }
 
         public Airplane() {}
@@ -58,7 +58,7 @@ namespace OOP1
             StartDate = new Date(airplane.StartDate);
             FinishDate = new Date(airplane.FinishDate);
         }
-
+        
         public int GetTotalTime()
         {
                 int totalTravelTimeInMinutes, timeYearDifference = 0, timeMonthDifference = 0, 

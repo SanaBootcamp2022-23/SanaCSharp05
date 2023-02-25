@@ -17,7 +17,7 @@ Currency EUR = new Currency("Euro", 40.65);
 var USD = new Currency("Dollar", 37.45);
 
 Product Samsung = new Product("Samsung S10", 300, USD, 5, "Samsung", 300.5);
-var iPhone = new Product("iPhone 11Pro", 400, USD, 5, "iPhone", 300.5);
+Product iPhone = new Product("iPhone 11Pro", 400, USD, 5, "iPhone", 300.5);
 
 Console.WriteLine(iPhone.GetPriceInUAH());
 Console.WriteLine(iPhone.GetTotalPriceInUAH());
